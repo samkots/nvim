@@ -1,22 +1,22 @@
 
-return {
+spec = {
   "nvim-treesitter/nvim-treesitter",
   build = ":TSUpdate",
   config = function ()
     require("nvim-treesitter.configs").setup {
       -- A list of parser names, or "all" (the listed parsers MUST always be installed)
       ensure_installed = {
-        "cpp", "c", "python", "rust", "lua", "luadoc", "vim", "vimdoc", "diff", "query",
-        "markdown", "markdown_inline", "mermaid",
-        "bash", "ssh_config", "make", "cmake",
-        "html", "css", "javascript", "json", "json5", "xml", "yaml",
-        "csv",
-        "cuda",
-        "disassembly",
-        "dockerfile",
-        "git_config", "git_rebase", "gitattributes", "gitcommit", "gitignore",
+        "cpp", "c", "python", "lua", --"luadoc", "rust", "vim", "vimdoc", "diff", "query",
+        --"markdown", "markdown_inline", "mermaid",
+        --"bash", "ssh_config", "make", "cmake",
+        --"html", "css", "javascript", "json", "json5", "xml", "yaml",
+        --"csv",
+        --"cuda",
+        --"disassembly",
+        --"dockerfile",
+        --"git_config", "git_rebase", "gitattributes", "gitcommit", "gitignore",
         --"go", "goctl", "gomod", "gosum", "gotmpl", "gowork",
-        "jinja", "jinja_inline",
+        --"jinja", "jinja_inline",
       },
 
       -- Install parsers synchronously (only applied to `ensure_installed`)
@@ -24,7 +24,7 @@ return {
 
       -- Automatically install missing parsers when entering buffer
       -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
-      auto_install = false, -- TODO: changed the default true to false, try enabling later
+      auto_install = true, -- TODO: changed the default true to false, try enabling later
 
       -- List of parsers to ignore installing (or "all")
       --ignore_install = { "javascript" },
@@ -74,7 +74,17 @@ return {
   end
 }
 
--- TODO: experiment foldign later:
+-- Enforcing the nvim-treesitter v0.8.5.1 for Neovim v0.8.0
+-- nvim-treesitter later than v0.8.5.1 doesn't work with Neovim v0.8.0
+utils = require("custom.utils")
+comparison = utils.compare_nvim_versions(utils.get_nvim_version(), {0, 8, 0})
+if comparison == 0 or comparison == -1 then
+  spec.version = "v0.8.5.1"   -- enforcing the compatible nvim-treesitter version
+end
+
+return spec
+
+-- TODO: experiment folding later:
 --vim.wo.foldmethod = 'expr'
 --vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 
