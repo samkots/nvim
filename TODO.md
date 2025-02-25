@@ -40,6 +40,7 @@ Plugins
 ## TODO:
 
 - [ ] treesitter - how it works - queries, parsers
+    - [ ] nvim-treesitter-textobject
     - [ ] where are the parsers installed?
     - [ ] what's the treesitter cli
 

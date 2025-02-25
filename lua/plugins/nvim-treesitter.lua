@@ -3,6 +3,7 @@ return {
   "nvim-treesitter/nvim-treesitter",
   build = ":TSUpdate",
   config = function ()
+    ---@diagnostic disable-next-line: missing-fields
     require("nvim-treesitter.configs").setup {
       -- A list of parser names, or "all" (the listed parsers MUST always be installed)
       ensure_installed = {
@@ -24,7 +25,7 @@ return {
 
       -- Automatically install missing parsers when entering buffer
       -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
-      auto_install = false, -- TODO: changed the default true to false, try enabling later
+      auto_install = true,
 
       -- List of parsers to ignore installing (or "all")
       --ignore_install = { "javascript" },

@@ -13,6 +13,15 @@ local deps_for_lua_ls = {
   }
 }
 
+-- using line specific option in code instead of disabling entirely: ---@diagnostic disable-next-line: missing-fields
+local lua_settings = {} --[[ {
+  Lua = {
+    diagnostics = {
+      disable = {"missing-parameters", "missing-fields"},
+    },
+  },
+} ]]
+
 local clangd_config = {
   cmd = { "clangd", "--background-index", "--clang-tidy", "--log=verbose" },
   fallbackFlags = { "--std=c++20" },
@@ -53,7 +62,7 @@ M = {
     dependencies = deps_for_lua_ls,
     config = function()
       local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup {}
+      lspconfig.lua_ls.setup { settings = lua_settings }
       lspconfig.clangd.setup { init_options = clangd_config }
     end,
   }
