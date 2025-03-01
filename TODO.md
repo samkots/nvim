@@ -16,7 +16,7 @@ Plugins
 - [ ] LSP
     - [ ] nvim-lspconfig plugin - data only repo that tells nvim, where the servers are, when to start them & config to pass
     - what's mason?
-    - what's cmp?
+    - what's cmp(vs blink)?
     - kickstarter has some cool functions (auto highlight on cursorhold)
 
 
