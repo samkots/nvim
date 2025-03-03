@@ -16,7 +16,7 @@ return {
         "disassembly",
         "dockerfile",
         "git_config", "git_rebase", "gitattributes", "gitcommit", "gitignore",
-        --"go", "goctl", "gomod", "gosum", "gotmpl", "gowork",
+        "go", "gomod", "gosum", "gotmpl", "gowork", -- goctl
         "jinja", "jinja_inline",
       },
 

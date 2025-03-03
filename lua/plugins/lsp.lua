@@ -52,7 +52,7 @@ M = {
     "williamboman/mason-lspconfig.nvim", -- using only for "ensure_installed" for auto installation
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "clangd" }, -- Mason's clangd version is newer than system one's, so keeping it
+        ensure_installed = { "lua_ls", "clangd", "gopls" }, -- Mason's clangd version is newer than system one's, so keeping it
         automatic_installation = false,
       })
     end,
@@ -64,6 +64,7 @@ M = {
       local lspconfig = require("lspconfig")
       lspconfig.lua_ls.setup { settings = lua_settings }
       lspconfig.clangd.setup { init_options = clangd_config }
+      lspconfig.gopls.setup({})
     end,
   }
 }

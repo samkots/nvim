@@ -2,8 +2,8 @@
 Plugins
 ===
 
-- [ ] neo-tree (alternatives?)
-- [ ] lualine (alternatives?)
+- [x] Snacks explorer (alternatives? Oil, neo-tree)
+- [x] lualine (alternatives?)
 - [ ] check git integration
     - [ ] https://www.reddit.com/r/neovim/comments/16xa2q0/what_is_the_best_git_diff_and_merge_tool/
     - [ ] https://www.youtube.com/watch?v=K-FKqXj8BAQ
@@ -14,11 +14,10 @@ Plugins
     - [ ] search more
     - [ ] vim-flog
 - [ ] LSP
-    - [ ] nvim-lspconfig plugin - data only repo that tells nvim, where the servers are, when to start them & config to pass
-    - what's mason?
+    - [x] nvim-lspconfig plugin - data only repo that tells nvim, where the servers are, when to start them & config to pass
+    - [x] mason?
     - what's cmp(vs blink)?
     - kickstarter has some cool functions (auto highlight on cursorhold)
-
 
 
 ## TIPS:
@@ -29,9 +28,25 @@ Plugins
 - Omni-complition; `:help ins-completion`
 
 
+## Try:
+
+Open while with cursor placed at the last position:
+
+```
+vim.api.nvim_create_autocmd("BufReadPost", {
+  pattern = "*",
+  callback = function()
+    if vim.fn.line("'\"") > 0 and vim.fn.line("'\"") <= vim.fn.line("$") then
+      vim.cmd("normal! g`\"")
+    end
+  end,
+})
+```
+
+
 ## General CLI
 
-- [ ] - fzf the fuzzy finder!
+- [x] - fzf the fuzzy finder!
 - [ ] - xargs
 - [ ] - tldr
 - [ ] - jq, yq, jqp
@@ -43,5 +58,4 @@ Plugins
     - [ ] nvim-treesitter-textobject
     - [ ] where are the parsers installed?
     - [ ] what's the treesitter cli
-
 
