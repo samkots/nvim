@@ -18,11 +18,11 @@ vim.opt.smartindent = true
 vim.opt.syntax = "on"
 vim.opt.termguicolors = true
 
-vim.opt.signcolumn = "number"
+vim.opt.signcolumn = "yes" -- "number"
 
 vim.opt.mouse = "a"
 vim.opt.mousescroll = "ver:1,hor:6"
---vim.opt.clipboard:append("unnamedplus") -- usees system clipboard as the default register
+--vim.opt.clipboard:append("unnamedplus") -- uses system clipboard as the default register
 
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' } --vim.opt.listchars = "tab:» ,trail:·,nbsp:␣"
