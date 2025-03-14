@@ -50,6 +50,16 @@ local config = {
       CursorLineNr = { fg = colors.peach },
       --Search = { fg =  "#c8f0c8", bg = "", style = { "underline" } },
       --CurSearch = { fg = colors.green, bg = "", style = { "bold", "undercurl" } },
+
+      SnacksIndent1 = { fg = "#707096" },
+      SnacksIndent2 = { fg = "#6a6a90" },
+      SnacksIndent3 = { fg = "#64648a" },
+      SnacksIndent4 = { fg = "#5e5e84" },
+      SnacksIndent5 = { fg = "#58587e" },
+      SnacksIndent6 = { fg = "#525278" },
+      SnacksIndent7 = { fg = "#4c4c72" },
+      SnacksIndent8 = { fg = "#46466c" },
+      SnacksIndentScope = { fg = "#75609e" }, -- "#7856a4"
     }
   end,
   default_integrations = true,
@@ -62,6 +72,10 @@ local config = {
     mini = {
       enabled = true,
       indentscope_color = "",
+    },
+    snacks = {
+      enabled = false,
+      indent_scope_color = "mauve", -- seems to accept only catppuccin colors
     },
     native_lsp = {
       enabled = true,

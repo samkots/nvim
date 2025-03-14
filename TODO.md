@@ -31,11 +31,7 @@ Plugins
 ## TODO
 
 - [ ] Snacks.picker.explorer.Config
-- [ ] Snacks.animate
-    - [ ] scroll
-    - [ ] indent
-    - [ ] dim
-    - [ ] zen
+- [ ] Snacks.git.* & Snacks.gitbrowse.*
 - [ ] Snacks picker preview `zt`
     - ~/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/core/preview.lua
     - In `function M:loc()` > `local function show()` add line: `vim.cmd("norm! ztze")`

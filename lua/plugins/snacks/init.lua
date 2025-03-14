@@ -8,18 +8,21 @@ return {
     -- your configuration comes here
     -- or leave it empty to use the default settings
     -- refer to the configuration section below
+    animate = require("plugins.snacks.animate"),
     --bigfile = { enabled = true },
     --dashboard = { enabled = true },
+    dim = require("plugins.snacks.dim"),
     explorer = { enabled = true },
-    --indent = { enabled = true },
+    indent = require("plugins.snacks.indent"),
     --input = { enabled = true },
     picker = require("plugins.snacks.picker"),
     notifier = require("plugins.snacks.notifier"),
     --quickfile = { enabled = true },
     --scope = { enabled = true },
-    --scroll = { enabled = true },
+    scroll = require("plugins.snacks.scroll"),
     --statuscolumn = { enabled = true },
     --words = { enabled = true },
+    zen = require("plugins.snacks.zen"),
   },
   keys = {
     -- Top Pickers & Explorer
@@ -45,7 +48,6 @@ return {
     { "<leader>gd", function() Snacks.picker.git_diff() end, desc = "Git Diff (Hunks)" },
     { "<leader>gf", function() Snacks.picker.git_log_file() end, desc = "Git Log File" },
     -- Grep
-    { "<leader>sb", function() Snacks.picker.lines() end, desc = "Buffer Lines" },
     { "<leader>sB", function() Snacks.picker.grep_buffers() end, desc = "Grep Open Buffers" },
     { "<leader>sg", function() Snacks.picker.grep() end, desc = "Grep" },
     { "<leader>sw", function() Snacks.picker.grep_word() end, desc = "Visual selection or word", mode = { "n", "x" } },
@@ -54,7 +56,6 @@ return {
     { '<leader>s/', function() Snacks.picker.search_history() end, desc = "Search History" },
     { "<leader>sa", function() Snacks.picker.autocmds() end, desc = "Autocmds" },
     { "<leader>sb", function() Snacks.picker.lines() end, desc = "Buffer Lines" },
-    { "<leader>sc", function() Snacks.picker.command_history() end, desc = "Command History" },
     { "<leader>sC", function() Snacks.picker.commands() end, desc = "Commands" },
     { "<leader>sd", function() Snacks.picker.diagnostics() end, desc = "Diagnostics" },
     { "<leader>sD", function() Snacks.picker.diagnostics_buffer() end, desc = "Buffer Diagnostics" },
