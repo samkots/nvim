@@ -8,18 +8,21 @@ return {
     -- your configuration comes here
     -- or leave it empty to use the default settings
     -- refer to the configuration section below
+    animate = require("plugins.snacks.animate"),
     --bigfile = { enabled = true },
     --dashboard = { enabled = true },
+    dim = require("plugins.snacks.dim"),
     explorer = { enabled = true },
-    --indent = { enabled = true },
+    indent = require("plugins.snacks.indent"),
     --input = { enabled = true },
     picker = require("plugins.snacks.picker"),
     notifier = require("plugins.snacks.notifier"),
     --quickfile = { enabled = true },
     --scope = { enabled = true },
-    --scroll = { enabled = true },
+    scroll = require("plugins.snacks.scroll"),
     --statuscolumn = { enabled = true },
     --words = { enabled = true },
+    zen = require("plugins.snacks.zen"),
   },
   keys = {
     -- Top Pickers & Explorer

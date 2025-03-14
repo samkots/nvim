@@ -50,6 +50,19 @@ local config = {
       CursorLineNr = { fg = colors.peach },
       --Search = { fg =  "#c8f0c8", bg = "", style = { "underline" } },
       --CurSearch = { fg = colors.green, bg = "", style = { "bold", "undercurl" } },
+
+      --SnacksIndent -> NoneText
+      --SnacksIndentBlank -> above
+      --SnacksIndentChunk -> Scope
+      --SnacksIndentScope -> Special
+      --SnacksIndent1 -> DiagnosticInfo
+      --SnacksIndent2 -> DiagnosticHint
+      --SnacksIndent3 -> DiagnosticWarn
+      --SnacksIndent4 -> DiagnosticError
+      --SnacksIndent5 -> DiagnosticInfo
+      --SnacksIndent6 -> DiagnosticHint
+      --SnacksIndent7 -> DiagnosticWarn
+      --SnacksIndent8 -> DiagnosticError
     }
   end,
   default_integrations = true,
@@ -62,6 +75,10 @@ local config = {
     mini = {
       enabled = true,
       indentscope_color = "",
+    },
+    snacks = {
+      enabled = false,
+      indent_scope_color = "peach", -- catppuccin color, sets the SnacksIndentChunk highlight group?
     },
     native_lsp = {
       enabled = true,
