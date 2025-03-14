@@ -1,5 +1,5 @@
 
----@class snacks.picker.config
+---@class snacks.picker.Config
 return {
   enabled = true,
   --layout = { preset = "default" }

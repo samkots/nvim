@@ -8,7 +8,7 @@ Plugins
     - [ ] https://www.reddit.com/r/neovim/comments/16xa2q0/what_is_the_best_git_diff_and_merge_tool/
     - [ ] https://www.youtube.com/watch?v=K-FKqXj8BAQ
     - [ ] lazy-git? - TUI cmd not a plugin but looks good!
-    - [ ] git-signs
+    - [x] git-signs
     - [ ] neogit > fugitive
     - [ ] diffview
     - [ ] search more
@@ -26,6 +26,19 @@ Plugins
 - Quick help: `:help lspconfig-all`
 - `:echo executable('<executable-file>')` - checks if neovim can find it
 - Omni-complition; `:help ins-completion`
+
+
+## TODO
+
+- [ ] Snacks.picker.explorer.Config
+- [ ] Snacks.animate
+    - [ ] scroll
+    - [ ] indent
+    - [ ] dim
+    - [ ] zen
+- [ ] Snacks picker preview `zt`
+    - ~/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/core/preview.lua
+    - In `function M:loc()` > `local function show()` add line: `vim.cmd("norm! ztze")`
 
 
 ## Try:
@@ -52,7 +65,7 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 - [ ] - jq, yq, jqp
 
 
-## TODO:
+## See later:
 
 - [ ] treesitter - how it works - queries, parsers
     - [ ] nvim-treesitter-textobject

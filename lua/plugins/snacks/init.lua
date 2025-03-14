@@ -14,7 +14,7 @@ return {
     --indent = { enabled = true },
     --input = { enabled = true },
     picker = require("plugins.snacks.picker"),
-    --notifier = { enabled = true },
+    notifier = require("plugins.snacks.notifier"),
     --quickfile = { enabled = true },
     --scope = { enabled = true },
     --scroll = { enabled = true },
