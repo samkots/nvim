@@ -32,9 +32,10 @@ Plugins
 
 - [ ] Snacks.picker.explorer.Config
 - [ ] Snacks.git.* & Snacks.gitbrowse.*
-- [ ] Snacks picker preview `zt`
+- [.] Snacks picker preview `zt`
     - ~/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/core/preview.lua
     - In `function M:loc()` > `local function show()` add line: `vim.cmd("norm! ztze")`
+    - https://github.com/folke/snacks.nvim/discussions/1604
 
 
 ## Try:

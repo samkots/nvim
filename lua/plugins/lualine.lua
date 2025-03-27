@@ -17,10 +17,18 @@ local branch = {
   icon = { '' }
 }
 
+local filename_symbols = {
+  modified = '󰐖 ', -- '[+]',
+  readonly = '󰏯 ', -- '[-]' '󱙃' non-modifiable or readonly
+  unnamed = ' ', -- '[No Name]'
+  newfile = '[New]', -- Text to show for newly created file before first write
+}
+
 local filename = {
   'filename',
   file_status = true,
   path = 1, -- 0 => just file name, 1 => relative path, 2 => absolute path
+  symbols = filename_symbols,
 }
 
 local function window_not_too_short()
@@ -80,7 +88,7 @@ return {
       inactive_sections = {
         lualine_a = {},
         lualine_b = {},
-        lualine_c = { { 'filename', path = 1 } },
+        lualine_c = { { 'filename', path = 1, symbols = filename_symbols } },
         lualine_x = { { 'location', padding = 0 } },
         lualine_y = {},
         lualine_z = {}
