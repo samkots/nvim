@@ -54,6 +54,7 @@ M = {
       require("mason-lspconfig").setup({
         ensure_installed = { "lua_ls", "clangd", "gopls" }, -- Mason's clangd version is newer than system one's, so keeping it
         automatic_installation = false,
+        automatic_enable = false
       })
     end,
   },
