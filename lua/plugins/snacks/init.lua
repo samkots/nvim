@@ -18,7 +18,7 @@ return {
     picker = require("plugins.snacks.picker"),
     notifier = require("plugins.snacks.notifier"),
     --quickfile = { enabled = true },
-    --scope = { enabled = true },
+    scope = require("plugins.snacks.scope"),
     scroll = require("plugins.snacks.scroll"),
     --statuscolumn = { enabled = true },
     --words = { enabled = true },
