@@ -62,10 +62,14 @@ M = {
     "neovim/nvim-lspconfig", -- manually configuring everything else here
     dependencies = deps_for_lua_ls,
     config = function()
-      local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup { settings = lua_settings }
-      lspconfig.clangd.setup { init_options = clangd_config }
-      lspconfig.gopls.setup({})
+      vim.lsp.config("lua_ls", { settings = lua_settings })
+      vim.lsp.enable("lua_ls")
+
+      vim.lsp.config("clangd", clangd_config)
+      vim.lsp.enable("clangd")
+
+      vim.lsp.config("gopls", {})
+      vim.lsp.enable("gopls")
     end,
   }
 }
