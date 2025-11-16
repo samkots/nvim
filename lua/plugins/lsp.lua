@@ -27,6 +27,19 @@ local clangd_config = {
   fallbackFlags = { "--std=c++20" },
 }
 
+local rust_analyzer_config = {
+  settings = {
+    ["rust-analyzer"] = {
+      check = {
+        command = "clippy";
+      },
+      diagnostics = {
+        enable = true;
+      }
+    }
+  }
+}
+
 --
 
 -- Order matters:
@@ -67,6 +80,9 @@ M = {
 
       vim.lsp.config("clangd", clangd_config)
       vim.lsp.enable("clangd")
+
+      vim.lsp.config("rust_analyzer", rust_analyzer_config)
+      vim.lsp.enable("rust_analyzer")
 
       vim.lsp.config("gopls", {})
       vim.lsp.enable("gopls")
