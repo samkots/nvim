@@ -15,6 +15,9 @@ vim.opt.smartindent = true
 
 --vim.opt.backspace = "indent,eol,start"
 
+vim.opt.ignorecase = true -- Ignore case when searching
+vim.opt.smartcase = true  -- Override ignorecase if search contains capitals
+
 vim.opt.syntax = "on"
 vim.opt.termguicolors = true
 
